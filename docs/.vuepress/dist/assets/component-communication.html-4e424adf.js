@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-6337ce86","path":"/interview-category/skill/vue/component-communication.html","title":"你能描述一下Vue中的组件通信有哪些方式吗？","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"interview-category/skill/vue/component-communication.md"}');export{e as data};
