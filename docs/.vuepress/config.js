@@ -1,5 +1,20 @@
+/*
+ * @Author: zcl 41391477@qq.com
+ * @Date: 2023-05-31 09:28:39
+ * @LastEditors: zcl 41391477@qq.com
+ * @LastEditTime: 2023-06-01 13:13:22
+ * @FilePath: \docs-web\docs\.vuepress\config.js
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
+ */
 import { defineUserConfig } from "vuepress";
 import { defaultTheme } from "@vuepress/theme-default";
+import getVueSidebar from "./sidebar/vue.js";
+import getJsSidebar from "./sidebar/javascript.js";
+import getCoreIdeaSidebar from "./sidebar/core-idea.js";
+import getReactSidebar from "./sidebar/react.js";
+import getMobileSidebar from "./sidebar/mobile.js";
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -14,22 +29,26 @@ export default defineUserConfig({
           {
             text: "技术面",
             children: [
-              {
-                text: "js",
-                link: "/",
-              },
-              {
-                text: "vue",
-                link: "/interview-category/skill/vue/component-communication.md",
-              },
-              {
-                text: "react",
-                link: "/",
-              },
-              {
-                text: "移动端",
-                link: "/",
-              },
+                {
+                    text: "核心概念",
+                    link: "/interview-category/skill/core-idea/closure.md",
+                },
+                {
+                    text: "js",
+                    link: "/",
+                },
+                {
+                    text: "vue",
+                    link: "/interview-category/skill/vue/component-communication.md",
+                },
+                {
+                    text: "react",
+                    link: "/",
+                },
+                {
+                    text: "mobile",
+                    link: "/",
+                },
             ],
           },
         ],
@@ -59,43 +78,34 @@ export default defineUserConfig({
     sidebar: {
       "/interview-category/": [
         {
-          text: "技术面",
-          children: [
-            {
-              text: "VUE",
-              collapsible: true,
-              children: [
+            text: "技术面",
+            children: [
                 {
-                  text: "组件通信有哪些方式",
-                  link: "/interview-category/skill/vue/component-communication.md",
+                    text: "核心概念",
+                    collapsible: true,
+                    children: getCoreIdeaSidebar()
                 },
                 {
-                  text: "生命周期钩子函数",
-                  link: "/interview-category/skill/vue/life-cycle.md",
+                    text: "js",
+                    collapsible: true,
+                    children: getJsSidebar()
                 },
                 {
-                  text: "双向数据绑定是如何实现的",
-                  link: "/interview-category/skill/vue/two-way-data-binding.md",
+                    text: "vue",
+                    collapsible: true,
+                    children: getVueSidebar()
                 },
                 {
-                  text: "常见的 Vue.js 指令及作用",
-                  link: "/interview-category/skill/vue/instruct.md",
+                    text: "react",
+                    collapsible: true,
+                    children: getReactSidebar()
                 },
                 {
-                  text: "nextTick函数",
-                  link: "/interview-category/skill/vue/nextTick.md",
-                },
-                {
-                  text: "computed和watcher的区别",
-                  link: "/interview-category/skill/vue/computed-wather.md",
-                },
-                {
-                  text: "Router 的理解和工作原理",
-                  link: "/interview-category/skill/vue/router.md",
-                },
-              ],
-            },
-          ],
+                    text: "mobile",
+                    collapsible: true,
+                    children: getMobileSidebar()
+                }
+            ]
         },
       ],
       "/reference/": [
