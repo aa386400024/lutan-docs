@@ -35,7 +35,7 @@ export default defineUserConfig({
                 },
                 {
                     text: "js",
-                    link: "/",
+                    link: "/interview-category/skill/js/execution-context.md",
                 },
                 {
                     text: "vue",
