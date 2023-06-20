@@ -15,6 +15,8 @@ import getJsSidebar from "./sidebar/javascript.js";
 import getCoreIdeaSidebar from "./sidebar/core-idea.js";
 import getReactSidebar from "./sidebar/react.js";
 import getMobileSidebar from "./sidebar/mobile.js";
+import getHtmlSidebar from "./sidebar/html.js";
+import getCssSidebar from "./sidebar/css.js";
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -32,6 +34,14 @@ export default defineUserConfig({
                 {
                     text: "核心概念",
                     link: "/interview-category/skill/core-idea/closure.md",
+                },
+                {
+                    text: "html",
+                    link: "/interview-category/skill/html/what-html5.md",
+                },
+                {
+                    text: "css",
+                    link: "/",
                 },
                 {
                     text: "js",
@@ -84,6 +94,16 @@ export default defineUserConfig({
                     text: "核心概念",
                     collapsible: true,
                     children: getCoreIdeaSidebar()
+                },
+                {
+                    text: "html",
+                    collapsible: true,
+                    children: getHtmlSidebar()
+                },
+                {
+                    text: "css",
+                    collapsible: true,
+                    children: getCssSidebar()
                 },
                 {
                     text: "js",
