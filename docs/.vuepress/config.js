@@ -41,7 +41,7 @@ export default defineUserConfig({
                 },
                 {
                     text: "css",
-                    link: "/",
+                    link: "/interview-category/skill/css/css-selector.md",
                 },
                 {
                     text: "js",
