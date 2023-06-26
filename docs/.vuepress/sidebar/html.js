@@ -12,5 +12,9 @@ module.exports = function getHtmlSidebar() {
             text: "渐进式jpg有了解过吗？",
             link: "/interview-category/skill/html/progressive-jpeg.md",
         },
+        {
+            text: "什么是渐进增强和优雅降级？",
+            link: "/interview-category/skill/html/jjzq-yyjj.md",
+        },
     ]
 }
